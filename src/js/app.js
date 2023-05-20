@@ -30,3 +30,15 @@ var app = new Framework7({
   // App routes
   routes: routes,
 });
+$('.accordion-item').on('accordion:opened', function () {
+  app.dialog.alert('Accordion item opened');
+});
+
+$('.accordion-item').on('accordion:closed', function (e) {
+  app.dialog.alert('Accordion item closed');
+});
+
+app.on('accordionOpened', function (el) {
+  console.log('The following element opened:');
+  console.log(el);
+});

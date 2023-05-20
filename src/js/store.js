@@ -3,6 +3,8 @@ import { createStore } from 'framework7';
 
 const store = createStore({
   state: {
+    loading: false,
+    users: [],
     products: [
       {
         id: '1',
@@ -24,11 +26,24 @@ const store = createStore({
   getters: {
     products({ state }) {
       return state.products;
-    }
+    },
+    loading({ state }) {
+      return state.loading;
+    },
+    users({ state }) {
+      return state.users;
+    },
   },
   actions: {
     addProduct({ state }, product) {
       state.products = [...state.products, product];
+    },
+    getUsers({ state }) {
+      state.loading = true;
+      setTimeout(() => {
+        state.users = ['User 1', 'User 2', 'User 3', 'User 4', 'User 5'];
+        state.loading = false;
+      }, 3000);
     },
   },
 })

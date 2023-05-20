@@ -2,7 +2,11 @@
 import HomePage from '../pages/home.f7';
 import AboutPage from '../pages/about.f7';
 import FormPage from '../pages/form.f7';
-import SignPage  from '../pages/sign.f7';
+
+import LoadUser from '../pages/load-user.f7';
+import ExemplePage from '../pages/exemple.f7';
+import AccordeonPage from '../pages/accordeon.f7';
+
 
 
 import DynamicRoutePage from '../pages/dynamic-route.f7';
@@ -15,11 +19,6 @@ var routes = [
     component: HomePage,
   },
   {
-    path: '/sign/',
-    component: SignPage ,
-  },
-
-  {
     path: '/about/',
     component: AboutPage,
   },
@@ -27,10 +26,23 @@ var routes = [
     path: '/form/',
     component: FormPage,
   },
+  {
+    path: '/exemple/',
+    component: ExemplePage,
+
+  },
+  {
+    path: '/load-user/',
+    component: LoadUser,
+  },
+  {
+    path: '/accordeon/',
+    component: AccordeonPage,
+  },
 
 
   {
-    path: '/dynamic-route/blog/:blogId/post/:postId/',
+    path: '/form/blog/:blogId/post/:postId/',
     component: DynamicRoutePage,
   },
   {

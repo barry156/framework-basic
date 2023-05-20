@@ -52,9 +52,23 @@
             </a>
           </li>
           <li>
-            <a href="/sign/" class="item-content item-link">
+            <a href="/load-user/" class="item-content item-link">
               <div class="item-inner">
-                <div class="item-title">Sign</div>
+                <div class="item-title">load User</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/exemple/" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title">Exemple</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/accordeon/" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title">Accordeon</div>
               </div>
             </a>
           </li>

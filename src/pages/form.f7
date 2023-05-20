@@ -235,13 +235,70 @@
             </div>
           </label>
         </li>
+        <li><b>$f7route.url</b>: ${$f7route.url}</li>
+        <li><b>$f7route.path</b>: ${$f7route.path}</li>
+        <li><b>$f7route.params</b>: ${JSON.stringify($f7route.params)}</li>
+        <li><b>$f7route.hash</b>: ${$f7route.hash}</li>
+        <li><b>$f7route.query</b>: ${JSON.stringify($f7route.query)}</li>
+        
       </ul>
     </div>
   </div>
 </div>
 </template>
 <script>
-export default () => {
+/*export default () => {
   return $render;
-};
+};*/
+export default function (props, { $f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted }) {
+    // Component Data
+    let name = 'Jimmy';
+    let age = 25;
+    let likes = ['Tennis', 'Chess', 'Football'];
+
+    // Component Methods
+    const openAlert = () => {
+      $f7.dialog.alert('Hello World');
+    }
+
+    // Lifecycle
+    $onBeforeMount(() => {
+      console.log('onBeforeMount');
+    });
+    $onMounted(() => {
+      console.log('onMounted');
+    });
+    $onBeforeUnmount(() => {
+      console.log('onBeforeUnmount');
+    });
+    $onUnmounted(() => {
+      console.log('onUnmounted');
+    });
+
+    // Page Events
+    $on('pageMounted', (e, page) => {
+      console.log('pageMounted', page);
+    });
+    $on('pageInit', (e, page) => {
+      console.log('pageInit', page);
+    });
+    $on('pageBeforeIn', (e, page) => {
+      console.log('pageBeforeIn', page);
+    });
+    $on('pageAfterIn', (e, page) => {
+      console.log('pageAfterIn', page);
+    });
+    $on('pageBeforeOut', (e, page) => {
+      console.log('pageBeforeOut', page);
+    });
+    $on('pageAfterOut', (e, page) => {
+      console.log('pageAfterOut', page);
+    });
+    $on('pageBeforeRemove', (e, page) => {
+      console.log('pageBeforeRemove', page);
+    });
+
+    // Return render function
+    return $render;
+  }
 </script>
