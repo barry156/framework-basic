@@ -3,6 +3,8 @@ import HomePage from '../pages/home.f7';
 import AboutPage from '../pages/about.f7';
 import FormPage from '../pages/form.f7';
 import FabButton from'../pages/fab-button.f7';
+import AccordeonPage from'../pages/accordeon.f7';
+import ExemplePage from'../pages/exemple.f7';
 
 
 import DynamicRoutePage from '../pages/dynamic-route.f7';
@@ -21,6 +23,14 @@ var routes = [
   {
     path: '/form/',
     component: FormPage,
+  },
+  {
+    path: '/accordeon/',
+    component: AccordeonPage,
+  },
+  {
+    path: '/exemple/',
+    component: ExemplePage,
   },
   {
   path: '/fab-button/',
