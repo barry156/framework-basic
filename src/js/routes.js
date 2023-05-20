@@ -2,11 +2,7 @@
 import HomePage from '../pages/home.f7';
 import AboutPage from '../pages/about.f7';
 import FormPage from '../pages/form.f7';
-
-import LoadUser from '../pages/load-user.f7';
-import ExemplePage from '../pages/exemple.f7';
-import AccordeonPage from '../pages/accordeon.f7';
-
+import FabButton from'../pages/fab-button.f7';
 
 
 import DynamicRoutePage from '../pages/dynamic-route.f7';
@@ -27,22 +23,11 @@ var routes = [
     component: FormPage,
   },
   {
-    path: '/exemple/',
-    component: ExemplePage,
-
+  path: '/fab-button/',
+  component: FabButton,
   },
   {
-    path: '/load-user/',
-    component: LoadUser,
-  },
-  {
-    path: '/accordeon/',
-    component: AccordeonPage,
-  },
-
-
-  {
-    path: '/form/blog/:blogId/post/:postId/',
+    path: '/dynamic-route/blog/:blogId/post/:postId/',
     component: DynamicRoutePage,
   },
   {
